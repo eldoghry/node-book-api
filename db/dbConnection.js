@@ -1,6 +1,6 @@
-const pool = require('./pool')
+import pool from './pool.js'
 
-exports.query = (queryString, queryParam) => {
+export const query = (queryString, queryParam) => {
     return new Promise((resolve, reject) => {
         pool.query(queryString, queryParam).then((result) => {
             resolve(result)

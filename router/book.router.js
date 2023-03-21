@@ -2,7 +2,7 @@ import express from 'express'
 import bookController from '../controller/book.controller.js'
 
 const router = express.Router()
-router.route('/books');
+// router.route('/books');
 
 router.get(bookController.getAllBooks)
 router.get('/:id', bookController.getBook)

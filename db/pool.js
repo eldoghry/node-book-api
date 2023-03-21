@@ -1,5 +1,6 @@
-const { Pool } = require('pg')
+import pg from 'pg'
 
+const { Pool } = pg
 const pool = new Pool({
     connectionString: process.env.DB_CONNECTION,
     max: 20,
@@ -11,5 +12,4 @@ const pool = new Pool({
 pool.on('connect', () => console.log('DB Connected Successfully'))
 pool.on('remove', () => console.log('DB Removed Successfully'))
 
-
-module.exports = pool
+export default pool
